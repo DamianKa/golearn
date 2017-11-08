@@ -1,9 +1,14 @@
 package main
 
-import ("fmt"
-		"math/rand")
+import ("fmt")
+
+
+	
+func add(x float64,y float64) float64 {
+	return x+y
+}
 
 func main() {
-	fmt.Println("A number from 1-100",rand.Intn(100))
+	add(5.5)
 
 }
