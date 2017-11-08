@@ -8,9 +8,16 @@ func add(x,y float64) float64 {
 	return x+y
 }
 
-func main() {
-	var num1,num2 float64 = 5.6, 9.5
+func multiple(a,b string) (string,string) {
+	return a,b
+}
 
-	fmt.Println(add(num1,num2))
+func main() {
+	//num1,num2 := 5.6, 9.5
+
+
+	w1, w2 := "Hey", "there"
+
+	fmt.Println(multiple(w1, w2))
 
 }
