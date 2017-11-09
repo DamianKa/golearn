@@ -1,23 +1,17 @@
 package main
 
-import ("fmt")
+import ("fmt"
+		"net/http")
 
+func index_handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Whoe, Go is neat!")
 
-	
-func add(x,y float64) float64 {
-	return x+y
 }
 
-func multiple(a,b string) (string,string) {
-	return a,b
-}
 
 func main() {
-	//num1,num2 := 5.6, 9.5
+	http.HandleFunc("/", index_handler)
+	http.ListenAndServe(":8000", nil)
 
-
-	w1, w2 := "Hey", "there"
-
-	fmt.Println(multiple(w1, w2))
 
 }
