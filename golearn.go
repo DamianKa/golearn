@@ -21,17 +21,20 @@ func (c car) mph() float64 {  //method but look like a function
 }
 
 func (c *car) new_top_speed(newspeed float64){
-	c.top_speed_kmh
+	c.top_speed_kmh = newspeed
 
 }
 
 func main (){
-	a_car := car{gas_pedal: 22341, 
+	a_car := car{gas_pedal: 65000, 
 			brake_pedal: 0, 
 			steering_wheel: 12561, 
 			top_speed_kmh: 225.0}
 
 	fmt.Println(a_car.gas_pedal)
+	fmt.Println(a_car.kmh())
+	fmt.Println(a_car.mph())
+	a_car.new_top_speed(500)
 	fmt.Println(a_car.kmh())
 	fmt.Println(a_car.mph())
 }
